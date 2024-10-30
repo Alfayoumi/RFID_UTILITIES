@@ -449,14 +449,14 @@ class RFIDSignalSimulator:
 
 sample_rate = 2e6  # 4 MHz sampling rate
 blf = 40e3  # 40 kHz BLF
-snr = 30
+snr = 20
 
 tag_configs = [
     TagConfig(distance=0.7, snr=20, doppler_shift=10, multipath_fading=True, phase_rotation=0,  rn16=np.array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1])),
-    TagConfig(distance=0.8, snr=20, doppler_shift=10, multipath_fading=True, phase_rotation=35, rn16=np.array([0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0])),
+    TagConfig(distance=0.8, snr=20, doppler_shift=10, multipath_fading=True, phase_rotation=90, rn16=np.array([0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0])),
     TagConfig(distance=0.9, snr=20, doppler_shift=10, multipath_fading=True, phase_rotation=45, rn16=np.array([1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1])),
-    TagConfig(distance=1.0, snr=20, doppler_shift=0, multipath_fading=False, phase_rotation=70, rn16=np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0])),
-    TagConfig(distance=1.0, snr=20, doppler_shift=0, multipath_fading=False, phase_rotation=70, rn16=np.array([1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0])),
+#    TagConfig(distance=1.0, snr=20, doppler_shift=0, multipath_fading=False, phase_rotation=70, rn16=np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0])),
+#    TagConfig(distance=1.0, snr=20, doppler_shift=0, multipath_fading=False, phase_rotation=70, rn16=np.array([1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0])),
 ]
 # Define the preamble (already modulated)
 modulated_preamble = np.array([1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1])  # Example preamble bits already modulated
